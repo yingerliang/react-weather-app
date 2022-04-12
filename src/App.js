@@ -14,7 +14,7 @@ export default function App() {
             target="_blank"
             rel="noreferrer"
           >
-            open-souced.
+            open-sourced.
           </a>
         </footer>
       </div>

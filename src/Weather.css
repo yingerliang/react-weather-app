@@ -26,28 +26,27 @@
 
 .Weather li {
   list-style: none;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.5;
   font-weight: 200;
 }
 
 .Weather img {
   display: inline-block;
-  height: 80px;
-  width: 80px;
-  margin-top: -40px;
-  margin-right: 10px;
+  height: 100px;
+  width: 100px;
 }
 
 .Weather .temperature {
   font-weight: 500;
   font-size: 64px;
+  margin-left: 10px;
 }
 
 .Weather .units {
   font-size: 25px;
   position: relative;
-  top: -25px;
+  margin-top: 15px;
 }
 
 .Weather .search {
@@ -60,4 +59,8 @@
   background-color: #baabda;
   border: #baabda;
   border-radius: 10px;
+}
+
+.Weather .icon-temp {
+  display: inline-flex;
 }
