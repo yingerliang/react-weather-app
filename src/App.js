@@ -1,5 +1,5 @@
 import './App.css'
 
 export default function App() {
-  return <div className="App">Weather App</div>
+  return <div className="App">Weather React App</div>
 }
