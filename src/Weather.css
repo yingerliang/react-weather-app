@@ -44,9 +44,10 @@
 }
 
 .Weather .units {
-  font-size: 25px;
+  font-size: 20px;
   position: relative;
-  margin-top: 15px;
+  bottom: 30px;
+  margin-left: 5px;
 }
 
 .Weather .search {
