@@ -12,6 +12,7 @@ export default function App() {
           <a
             href="https://github.com/yingerliang/vanilla-weather-app"
             target="_blank"
+            rel="noreferrer"
           >
             open-souced.
           </a>
