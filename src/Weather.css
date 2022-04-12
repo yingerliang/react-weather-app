@@ -1,3 +1,63 @@
 .Weather {
-  border: 1px solid black;
+  font-family: 'Be Vietnam Pro', sans-serif;
+  border: 1px solid #d6e5fa;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(67, 67, 160, 0.25) 0px 50px 100px -20px,
+    rgba(164, 107, 245, 0.3) 0px 30px 60px -30px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 10px;
+  max-width: 1000px;
+
+  color: black;
+}
+
+.Weather h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 10px 0 0 0;
+  color: #baabda;
+}
+
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Weather li {
+  list-style: none;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 200;
+}
+
+.Weather img {
+  display: inline-block;
+  height: 80px;
+  width: 80px;
+  margin-top: -40px;
+  margin-right: 10px;
+}
+
+.Weather .temperature {
+  font-weight: 500;
+  font-size: 64px;
+}
+
+.Weather .units {
+  font-size: 25px;
+  position: relative;
+  top: -25px;
+}
+
+.Weather .search {
+  background-color: #d77fa1;
+  border: #d77fa1;
+  border-radius: 10px;
+}
+
+.Weather .location {
+  background-color: #baabda;
+  border: #baabda;
+  border-radius: 10px;
 }
