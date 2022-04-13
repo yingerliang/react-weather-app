@@ -9,12 +9,12 @@ export default function Weather(props) {
   const [city, setCity] = useState(props.defaultCity)
 
   function handleResponse(response) {
-    console.log(response.data)
     setWeatherData({
       ready: true,
       temperature: Math.round(response.data.main.temp),
       city: response.data.name,
-      wind: Math.round(response.data.wind.speed),
+      country: response.data.sys.country,
+      wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       feels: Math.round(response.data.main.feels_like),
       icon: response.data.weather[0].icon,
@@ -24,19 +24,28 @@ export default function Weather(props) {
     })
   }
 
+  function handleSubmit(event) {
+    event.preventDefault()
+    search()
+  }
+
+  function handleCityInput(event) {
+    setCity(event.target.value)
+  }
+
   function search() {
     const apiKey = '54dfc62951352928127c2936e913c9ea'
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     axios.get(apiUrl).then(handleResponse)
   }
 
-  function handleSubmit(event) {
+  function getCurrentLocation(event) {
     event.preventDefault()
-    search()
-  }
-
-  function handleInput(event) {
-    setCity(event.target.value)
+    navigator.geolocation.getCurrentPosition((position) => {
+      const apiKey = '54dfc62951352928127c2936e913c9ea'
+      const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=metric`
+      axios.get(apiUrl).then(handleResponse)
+    })
   }
 
   if (weatherData.ready) {
@@ -50,7 +59,7 @@ export default function Weather(props) {
                 placeholder="Enter a city..."
                 className="form-control"
                 autoFocus="on"
-                onChange={handleInput}
+                onChange={handleCityInput}
               />
             </div>
             <div className="col">
@@ -61,11 +70,13 @@ export default function Weather(props) {
               />
             </div>
             <div className="col">
-              <input
+              <button
                 type="submit"
-                value="Location"
                 className="btn btn-primary location"
-              />
+                onClick={getCurrentLocation}
+              >
+                Location
+              </button>
             </div>
           </div>
         </form>
