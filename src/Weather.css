@@ -65,3 +65,7 @@
 .Weather .icon-temp {
   display: inline-flex;
 }
+
+.Weather .WeatherInfo {
+  margin-bottom: 40px;
+}
