@@ -20,11 +20,12 @@ export default function Weather(props) {
       icon: response.data.weather[0].icon,
       description: response.data.weather[0].description,
       date: new Date(response.data.dt * 1000),
+      coordinates: response.data.coord,
     })
   }
 
   function search() {
-    const apiKey = 'c02f2f4ad7a3939670c2af0979e7bdd0'
+    const apiKey = '54dfc62951352928127c2936e913c9ea'
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
     axios.get(apiUrl).then(handleResponse)
   }
@@ -69,7 +70,7 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherOverview data={weatherData} />
-        <WeatherForecast />
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     )
   } else {
