@@ -5,25 +5,28 @@ import fog from './images/fog.svg'
 import night from './images/night.svg'
 import overcast from './images/overcast.svg'
 import partlycloudy from './images/partly-cloudy.svg'
-import partlycloudyn from './images/partly-cloudy-night.svg'
+import partlycloudynight from './images/partly-cloudy-night.svg'
 import rain from './images/rain.svg'
 import snow from './images/snow.svg'
 import thunderstorm from './images/thunderstorms.svg'
+import rainday from './images/rain-day.svg'
+import rainnight from './images/rain-night.svg'
+import './WeatherOverview.css'
 
 export default function WeatherIcon(props) {
   const codeMapping = {
     '01d': sunny,
     '01n': night,
     '02d': partlycloudy,
-    '02n': partlycloudyn,
+    '02n': partlycloudynight,
     '03d': overcast,
     '03n': overcast,
     '04d': cloudy,
     '04n': cloudy,
     '09d': rain,
     '09n': rain,
-    '10d': rain,
-    '10n': rain,
+    '10d': rainday,
+    '10n': rainnight,
     '11d': thunderstorm,
     '11n': thunderstorm,
     '13d': snow,
@@ -37,7 +40,7 @@ export default function WeatherIcon(props) {
       <img
         src={codeMapping[props.code]}
         alt={props.alt}
-        className="weatherIcon float-left"
+        className="weatherIcon"
       />
     </div>
   )

@@ -12,44 +12,6 @@
   color: black;
 }
 
-.Weather h1 {
-  font-size: 40px;
-  font-weight: 700;
-  margin: 10px 0 0 0;
-  color: #baabda;
-}
-
-.Weather ul {
-  margin: 0;
-  padding: 0;
-}
-
-.Weather li {
-  list-style: none;
-  font-size: 18px;
-  line-height: 1.5;
-  font-weight: 200;
-}
-
-.Weather img {
-  display: inline-block;
-  height: 100px;
-  width: 100px;
-}
-
-.Weather .temperature {
-  font-weight: 500;
-  font-size: 64px;
-  margin-left: 10px;
-}
-
-.Weather .units {
-  font-size: 20px;
-  position: relative;
-  bottom: 30px;
-  margin-left: 5px;
-}
-
 .Weather .search {
   background-color: #d77fa1;
   border: #d77fa1;
@@ -60,12 +22,4 @@
   background-color: #baabda;
   border: #baabda;
   border-radius: 10px;
-}
-
-.Weather .icon-temp {
-  display: inline-flex;
-}
-
-.Weather .WeatherInfo {
-  margin: 30px 0 40px 20px;
 }

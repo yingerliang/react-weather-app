@@ -15,6 +15,14 @@ export default function App() {
             rel="noreferrer"
           >
             open-sourced.
+          </a>{' '}
+          Icons from{' '}
+          <a
+            href="https://bas.dev/projects/weather-icons"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Bas
           </a>
         </footer>
       </div>
