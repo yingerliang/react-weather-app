@@ -8,7 +8,15 @@ export default function App() {
       <div className="container">
         <Weather defaultCity="Auckland" />
         <footer>
-          This project was coded by Rebecca and is{' '}
+          This project was coded by{' '}
+          <a
+            href="https://portfolio-rebecca.netlify.app/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Rebecca
+          </a>{' '}
+          and is{' '}
           <a
             href="https://github.com/yingerliang/vanilla-weather-app"
             target="_blank"
